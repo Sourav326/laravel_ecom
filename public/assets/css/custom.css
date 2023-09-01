@@ -96,6 +96,12 @@
     color: #3b5d50;
     font-weight: 600;
   }
+  .course-free-btn{
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+  }
+  
   .course-entry .meta{
     padding-bottom: 20px;
   }
@@ -107,5 +113,11 @@
     top: 30px;
     right: 0px;
     font-weight: 600;
+    z-index: 90;
+  }
+  .premium-course-badge{
+    position: absolute;
+    top: 20px;
+    left: 20px;
     z-index: 90;
   }
