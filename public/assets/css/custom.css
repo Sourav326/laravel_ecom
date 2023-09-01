@@ -66,3 +66,46 @@
   }
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .post-entry{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px
+  }
+  .views-count{
+    color: rgb(124, 124, 124);
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  .course-entry h3{
+    line-height: 25px;
+  }
+  .course-entry{
+    position: relative;
+  }
+  .course-category{
+    font-size: 12px;
+  }
+
+  .course-amount{
+    font-size: 1.8rem;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    color: #3b5d50;
+    font-weight: 600;
+  }
+  .course-entry .meta{
+    padding-bottom: 20px;
+  }
+  .best-selller{
+    text-transform: uppercase;
+    background-color: orangered;
+    color: #ffffff;padding: 5px 10px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    font-weight: 600;
+    z-index: 90;
+  }

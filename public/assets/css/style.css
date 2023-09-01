@@ -512,9 +512,9 @@ a {
     text-decoration: none; }
   .blog-section .post-entry .post-thumbnail {
     display: block;
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
     .blog-section .post-entry .post-thumbnail img {
-      border-radius: 20px;
+      border-radius: 10px;
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }

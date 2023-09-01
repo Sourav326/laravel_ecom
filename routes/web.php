@@ -44,4 +44,4 @@ Route::get('blogs',[BlogController::class,'index'])->name('blogs');
 
 
 //Course Controller
-Route::get('blogs',[CourseController::class,'index'])->name('courses');
+Route::get('courses',[CourseController::class,'index'])->name('courses');
