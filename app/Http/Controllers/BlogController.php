@@ -3,24 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Newsletter;
-use App\Models\Product;
 use App\Models\Blog;
 
-class HomeController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $title      = 'Home';
-        $products   = Product::where('status','active')->limit(3)->get();
-        $blogs      = Blog::where('status','active')->limit(3)->get();
-        return view('home',[
-            'title'     => $title,
-            'products'  =>$products,
-            'blogs'     =>$blogs,
+        $blogs = Blog::where('status','Active')->paginate(4);
+        return view('blog.index',[
+            'title' => 'Blogs',
+            'blogs' => $blogs
         ]);
     }
 
@@ -29,7 +24,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-       //
+        //
     }
 
     /**
@@ -37,16 +32,7 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        $alredyAvailable = Newsletter::where('email',$request->email)->first();
-        if($alredyAvailable){
-            return response()->json(['fail'=>'You are already a subscriber of Furniture.']);
-        } else {
-            Newsletter::create([
-                'name' => $request->name,
-                'email' => $request->email,
-            ]);
-            return response()->json(['success'=>'Thanks for subscribing Furniture.']);
-        }
+        //
     }
 
     /**

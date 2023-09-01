@@ -29,9 +29,9 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+        return redirect('/')->with('success', 'Logged in Successfully');
 
-        return redirect('/');
-        // return redirect()->intended(RouteServiceProvider::HOME);
+        //return redirect()->intended(RouteServiceProvider::HOME)->with('success', 'Logged In Successfully');
     }
 
     /**
@@ -45,6 +45,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login')->with('success', 'Logout Successfully');
     }
 }

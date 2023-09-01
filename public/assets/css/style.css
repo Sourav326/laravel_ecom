@@ -92,8 +92,7 @@ a {
     .custom-navbar .custom-navbar-cta li {
       margin-left: 0px;
       margin-right: 0px; }
-      .custom-navbar .custom-navbar-cta li:first-child {
-        margin-right: 20px; }
+      
 
 .hero {
   background: #3b5d50;

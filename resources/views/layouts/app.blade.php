@@ -16,6 +16,7 @@
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
+  <title>Furniture - {{$title}}</title>
 
 		<!-- Bootstrap CSS -->
 		<link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -50,6 +51,13 @@
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li>
+						<!-- <img src="{{asset('assets/images/user.svg')}}"> -->
+						@if(Auth::user())
+										<a class="nav-link loginLogoutIcon" href="{{route('profile.edit')}}">Profile</a>
+							
+							@endif
+						</li>
+						<li>
 							<!-- <img src="{{asset('assets/images/user.svg')}}"> -->
 							@if(Auth::user())
 							<form method="POST" action="{{ route('logout') }}"id="logoutForm">
@@ -64,12 +72,27 @@
 								<a class="nav-link loginLogoutIcon" href="{{route('login')}}">Login</a>
 								@endif
 							</li>
-							<li><a class="nav-link" href="cart.html"><img src="{{asset('assets/images/cart.svg')}}"></a></li>
+							<li>
+								<a class="nav-link" href="cart.html">
+									<img src="{{asset('assets/images/cart.svg')}}">
+									<span class="cartItem badge badge-light">4</span>
+								</a>
+							</li>
 					</ul>
 				</div>
 			</div>
 				
 		</nav>
+        @if (session('success'))
+            <div class="toster alert-success">
+                {{ session('success') }}
+            </div>
+        @elseif(session('danger'))
+             <div class="toster alert-danger">
+                {{ session('danger') }}
+            </div>
+        @endif
+        
 		<!-- End Header/Navigation -->
 
         @yield('content')
@@ -229,6 +252,13 @@
 				console.log("Clicked");
 				document.getElementById("logoutForm").submit();
 			}
+
+            setTimeout(myGreeting, 3000);
+            function myGreeting(){
+                const toster = document.querySelector(".toster");
+                toster.style.display = "none"; 
+                toster.style.opacity = 0; 
+            }
         </script>
 	</body>
 

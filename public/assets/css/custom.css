@@ -11,3 +11,58 @@
     font-weight: 600;
     color: #ffffff !important;
 }
+
+.toster{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    transition: all 2s linear;
+}
+.errorMsg{
+    color: red;
+    font-size: 0.8rem;
+}
+.formHead{
+    color: #3b5d50;
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+.startingFormLink{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    justify-content: right;
+}
+.cartItem{
+    background-color: red;
+    position: relative;
+    left: -5px;
+    top: -12px;
+}
+
+/* pagination */
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a , .paginateNext {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #b3b2b2;
+    margin: 0 4px;
+  }
+  
+  .pagination a.active {
+    background-color: #3b5d50;
+    color: white;
+    border: 1px solid #3b5d50;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}

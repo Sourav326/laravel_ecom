@@ -12,36 +12,32 @@
     <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('put')
+        <div class="row">
+            <div class="col-4 mb-4">
+                <label class="text-black" for="current_password">Current Password</label>
+                <input class="form-control" id="current_password" type="password" password="current_password" required autofocus autocomplete="current-password">
+                <span class="errorMsg">{{ $errors->updatePassword->first('current_password') }}</span>
+            </div>
 
-        <div>
-            <x-input-label for="current_password" :value="__('Current Password')" />
-            <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
-            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
-        </div>
-
-        <div>
-            <x-input-label for="password" :value="__('New Password')" />
-            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
-        </div>
-
-        <div>
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
-        </div>
+            <div class="col-4 mb-4"> 
+                <label class="text-black" for="password">New Password</label>
+                <input class="form-control" id="password" type="password" name="password" required autofocus autocomplete="new-password">
+                <span class="errorMsg">{{ $errors->updatePassword->first('password') }}</span>
+            </div>
+            <div class="col-4 mb-4"> 
+                <label class="text-black" for="password_confirmation">Confirm Password</label>
+                <input class="form-control" id="password_confirmation" type="password" name="password_confirmation" required autofocus autocomplete="new-password">
+                <span class="errorMsg">{{ $errors->updatePassword->first('password_confirmation') }}</span>
+            </div>
+        </diV>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <button class="btn btn-primary">
+                {{ __('Save') }}
+            </button>
 
             @if (session('status') === 'password-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('Saved.') }}</p>
+                <span class="text-success pl-4">Password Update successfully</span>
             @endif
         </div>
     </form>
