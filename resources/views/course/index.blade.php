@@ -19,7 +19,7 @@
                                     <img class="premium-course-badge" src="{{asset('assets/images/courses/premium-quality1.png')}}" width=30px>
                                 @endif
                                 <span class="best-selller">Bestseller</span>
-                                <a href="#" class="post-thumbnail"><img src="{{asset($course->image)}}" alt="Image" class="img-fluid"></a>
+                                <a href="#" class="post-thumbnail"><img class="course-template" src="{{asset($course->image)}}" alt="Image" class="img-fluid"></a>
                                 <div class="post-content-entry course-entry">
                                     <p class="views-count">109k views</p>
                                     <h3><a href="#">{{$course->title}}</a></h3>
