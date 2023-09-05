@@ -95,17 +95,6 @@
         
 		<!-- End Header/Navigation -->
 
-
-		@if(session('success'))
-			<div class="message message-success">
-				{{ session('success') }} 😍
-			</div>
-		@elseif(session('danger'))
-			<div class="message message-danger">
-				{{ session('danger') }} 🥺
-			</div>
-		@endif
-
         @yield('content')
 
 
