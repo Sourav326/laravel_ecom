@@ -28,7 +28,6 @@
                                     <div class="post-content-entry course-entry">
                                         <p class="views-count">109k views</p>
                                         <h3><a href="{{route('courses.show',$course->id)}}">{{$course->title}}</a></h3>
-                                        <p class="course-category">Development | Javascript</p>
                                         <p class="course-short-desc">A practical programming course for office workers, academics, and administrators who want to improve their productivity.</p>
                                         <ul class="alternating-culors">
                                             <li>You will learn how to leverage the power of Python to solve tasks</li>

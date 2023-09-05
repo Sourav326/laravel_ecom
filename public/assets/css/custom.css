@@ -213,5 +213,68 @@ ul {
   background: #000;
   color: #ffffff;
   padding: 50px 20px;
-
 }
+
+.course-detail-thumbnail{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.course-detail-thumbnail img{
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+}
+.course-detail-short-desc{
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.top-head-first{
+  padding-right: 50px;
+}
+.what-you-learn{
+  border: 1px dashed grey;
+  
+  border-radius: 10px;
+}
+.section-title{
+  text-transform: capitalize;
+}
+.scroll-fixed-bar{
+  visibility: hidden;
+    width: 100%;
+    padding: 8px 50px;
+    background-color: #1b6c00;
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.scroll-fixed-bar .fixed-title{
+  font-weight: 600;
+  font-size: 18px;
+}
+.student-count{
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.scroll-fixed-bar-show{
+  visibility: visible;
+}
+.tultip-text h3, .course-short-desc{
+  text-align: left;
+}
+.course-detail-sidebar-fixed{
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.course-detail-sidebar-fixed-after-scroll{
+  position: fixed;
+  top: 30px;
+  z-index: 30000;
+  width: 23%;
+}
+
