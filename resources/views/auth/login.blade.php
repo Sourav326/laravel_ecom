@@ -23,8 +23,7 @@
                                     <label class="text-black" for="lname">Password</label>
                                     <input class="form-control" id="password" type="password" name="password" required
                                         autocomplete="current-password">
-                                    <span class="errorMsg">{{ $errors->first('email') }}</span>
-
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
                                 </div>
                             </div>
                         </div>
