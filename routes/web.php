@@ -25,9 +25,7 @@ Route::get('/shop/{id}', [ShopController::class, 'show'])->name('shop.show');
 Route::post('/subscribe', [HomeController::class, 'store'])->name('home.store');
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
