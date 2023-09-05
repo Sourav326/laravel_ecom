@@ -53,7 +53,7 @@
 						<li>
 						<!-- <img src="{{asset('assets/images/user.svg')}}"> -->
 						@if(Auth::user())
-										<a class="nav-link loginLogoutIcon" href="{{route('profile.edit')}}">Profile</a>
+										<a class="nav-link loginLogoutIcon" href="{{route('profile')}}">Profile</a>
 							
 							@endif
 						</li>
