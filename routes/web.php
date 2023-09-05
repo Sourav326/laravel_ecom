@@ -45,3 +45,4 @@ Route::get('blogs',[BlogController::class,'index'])->name('blogs');
 
 //Course Controller
 Route::get('courses',[CourseController::class,'index'])->name('courses');
+Route::get('courses/{id}',[CourseController::class,'show'])->name('courses.show');

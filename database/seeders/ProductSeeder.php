@@ -18,6 +18,18 @@ class ProductSeeder extends Seeder
             ['title' => 'Nordic Chair','image'=>'assets/images/product-2.png','price'=>20,'stock_available'=>300,'in_stock'=>'yes','status'=>'active'],
             ['title' => 'Nordic Chair','image'=>'assets/images/product-1.png','price'=>100,'stock_available'=>570,'in_stock'=>'yes','status'=>'active'],
             ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>70,'stock_available'=>90,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>40,'stock_available'=>100,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-2.png','price'=>20,'stock_available'=>300,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-1.png','price'=>100,'stock_available'=>570,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>70,'stock_available'=>90,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>40,'stock_available'=>100,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-2.png','price'=>20,'stock_available'=>300,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-1.png','price'=>100,'stock_available'=>570,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>70,'stock_available'=>90,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>40,'stock_available'=>100,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-2.png','price'=>20,'stock_available'=>300,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-1.png','price'=>100,'stock_available'=>570,'in_stock'=>'yes','status'=>'active'],
+            ['title' => 'Nordic Chair','image'=>'assets/images/product-3.png','price'=>70,'stock_available'=>90,'in_stock'=>'yes','status'=>'active'],
         ];
         foreach($products as $product){
 

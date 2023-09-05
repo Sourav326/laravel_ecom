@@ -12,7 +12,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::where('status','Active')->paginate(4);
+        $blogs = Blog::where('status','Active')->paginate(9);
         return view('blog.index',[
             'title' => 'Blogs',
             'blogs' => $blogs
