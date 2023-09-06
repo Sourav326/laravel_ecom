@@ -18,11 +18,12 @@
                                 @if($course->is_premium == 'yes')
                                     <img class="premium-course-badge" src="{{asset('assets/images/courses/premium-quality1.png')}}" width=30px>
                                 @endif
-                                <div class="best-selller">
-                                    <div class="selller-arrow"></div>
-                                    <span class="selller">&nbsp;&nbsp;Bestseller</span>
-                                </div>
-
+                                @if($course->is_bestseller == 'yes')
+                                    <div class="best-selller">
+                                        <div class="selller-arrow"></div>
+                                        <span class="selller">&nbsp;&nbsp;Bestseller</span>
+                                    </div>
+                                @endif
                                 <a href="{{route('courses.show',$course->id)}}" class="post-thumbnail"><img class="course-template " src="{{asset($course->image)}}" alt="Image" class="img-fluid"></a>
                                 <span class="tultip-text">
                                     <div class="post-content-entry course-entry">
@@ -34,7 +35,10 @@
                                             <li>You will build games and programs that use Python libraries.</li>
                                             <li>Programmatically generate and update Excel spreadsheets.</li>
                                         </ul>
-                                        <a href="{{route('courses.show',$course->id)}}"><span class="btn">Go to course</span></a>
+                                        <div class="tooltip-btns">
+                                            <a href="{{route('courses.show',$course->id)}}"><span class="btn buy-btn">Add to cart</span></a>
+                                            <a class="heart-anchor" href="javascript:void(0)"><i class="fa-regular fa-heart color-deeppink"></i></a>
+                                        </div>
                                     </div>
                                 </span>
                                 <div class="post-content-entry course-entry">

@@ -71,3 +71,40 @@
 
 
 })()
+
+
+const iconElements = document.querySelectorAll(".fa-heart");
+
+iconElements.forEach((icon) => {
+  icon.addEventListener("click", function() {
+    if (this.classList.contains("fa-regular")) {
+      this.classList.remove("fa-regular");
+      this.classList.add("fa-solid");
+    } else {
+      this.classList.remove("fa-solid");
+      this.classList.add("fa-regular");
+    }
+  });
+});
+
+
+const bar = document.querySelector('.scroll-fixed-bar');
+const fixedSidebar = document.querySelector('.course-detail-sidebar-fixed');
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const scrollThreshold = 300;
+    const scrollThresholdForFixSidebar = 440;
+
+    if (scrollY > scrollThreshold) {
+        bar.classList.add('scroll-fixed-bar-show');
+    } else {
+        bar.classList.remove('scroll-fixed-bar-show');
+    }
+
+
+    if (scrollY > scrollThresholdForFixSidebar) {
+        fixedSidebar.classList.add('course-detail-sidebar-fixed-after-scroll');
+    } else {
+        fixedSidebar.classList.remove('course-detail-sidebar-fixed-after-scroll');
+    }
+});

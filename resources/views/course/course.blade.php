@@ -115,34 +115,14 @@
                     </div>
                     <h3>Fast &amp; Free Shipping</h3>
                     <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                    <p><a href="http://127.0.0.1:8000/shop" class="btn buy-btn">Buy this course</a></p>
+                    <div class="tooltip-btns">
+                        <a href="{{route('courses.show',$course->id)}}"><span class="btn buy-btn">Buy this course</span></a>
+                        <a class="heart-anchor" href="javascript:void(0)"><i class="fa-regular fa-heart color-deeppink"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-const bar = document.querySelector('.scroll-fixed-bar');
-const fixedSidebar = document.querySelector('.course-detail-sidebar-fixed');
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const scrollThreshold = 300;
-    const scrollThresholdForFixSidebar = 440;
-
-    if (scrollY > scrollThreshold) {
-        bar.classList.add('scroll-fixed-bar-show');
-    } else {
-        bar.classList.remove('scroll-fixed-bar-show');
-    }
-
-
-    if (scrollY > scrollThresholdForFixSidebar) {
-        fixedSidebar.classList.add('course-detail-sidebar-fixed-after-scroll');
-    } else {
-        fixedSidebar.classList.remove('course-detail-sidebar-fixed-after-scroll');
-    }
-});
-</script>
 
 @endsection

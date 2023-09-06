@@ -15,7 +15,7 @@
                     <a href="#">
                         <div class="post-content-entry course-entry">
                         <div class="d-flex justify-content-between align-items-center">
-                                <h3>My Learnings</h3>
+                                <h3>My Learnings <span class="item-count"> (2 items)</span></h3>
                                 <i class="fa-solid fa-book my-account-icon color-green"></i>
                             </div>
                             <p class="course-category">Your Purchased Courses</p>
@@ -31,7 +31,7 @@
                     <a href="#">
                         <div class="post-content-entry course-entry">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h3>My Cart</h3>
+                                <h3>My Cart<span class="item-count"> (2 items)</span></h3>
                                 <i class="fa-solid fa-cart-plus my-account-icon color-orangred"></i>
                             </div>
                             <p class="course-category">Your next purchase products</p>
@@ -47,8 +47,8 @@
                     <a href="#">
                         <div class="post-content-entry course-entry">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h3>Wishlist</h3>
-                                <i class="fa-solid fa-list-check my-account-icon color-deeppink"></i>
+                                <h3>Wishlist <span class="item-count">(2 items)</span></h3>
+                                <i class="fa-regular fa-heart my-account-icon color-deeppink"></i>
                             </div>
                             <p class="course-category">Your next purchase products</p>
                             <div class="meta">
@@ -63,7 +63,7 @@
                     <a href="#">
                         <div class="post-content-entry course-entry">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h3>Notifications</h3>
+                                <h3>Notifications <span class="item-count">(2 items)</span></h3>
                                 <i class="fa-solid fa-bell-slash my-account-icon color-blueviolet"></i>
                             </div>
                             <p class="course-category">Your next purchase products</p>
