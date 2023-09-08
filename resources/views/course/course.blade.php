@@ -103,6 +103,90 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Day 4 - Beginner - Understanding Data Types and How to Manipulate Strings
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul class="fa-ul course-content-ul" style="--fa-li-margin: 1em;">
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>List icons
+                                        can</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>be used to
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>replace
+                                        bullets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Day 5 - Beginner - Control Flow and Logical Operators
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul class="fa-ul course-content-ul" style="--fa-li-margin: 1em;">
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>List icons
+                                        can</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>be used to
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>replace
+                                        bullets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Day 6 - Beginner - Understanding Data Types and How to Manipulate Strings
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul class="fa-ul course-content-ul" style="--fa-li-margin: 1em;">
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>List icons
+                                        can</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>be used to
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>replace
+                                        bullets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Day 7 - Beginner - Control Flow and Logical Operators
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul class="fa-ul course-content-ul" style="--fa-li-margin: 1em;">
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>List icons
+                                        can</li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>be used to
+                                    </li>
+                                    <li><span class="fa-li"><i class="fa-solid fa-video"></i></span>replace
+                                        bullets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -116,13 +200,22 @@
                     <h3>Fast &amp; Free Shipping</h3>
                     <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                     <div class="tooltip-btns">
-                        <a href="{{route('courses.show',$course->id)}}"><span class="btn buy-btn">Buy this course</span></a>
-                        <a class="heart-anchor" href="javascript:void(0)"><i class="fa-regular fa-heart color-deeppink"></i></a>
+                        <a href="{{route('courses.show',$course->id)}}">
+                            <span class="btn buy-btn">Buy thiscourse</span>
+                        </a>
+                        <form method="post" id="wishlistForm" action="{{route('wishlist.store')}}">
+                            @csrf
+                            <input type="hidden" value="{{$course->id}}" name="course_id" >
+                            <div class="heart-anchor">
+                                <i class="fa-regular fa-heart color-deeppink"></i>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 @endsection

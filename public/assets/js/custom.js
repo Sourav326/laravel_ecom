@@ -80,6 +80,9 @@ iconElements.forEach((icon) => {
     if (this.classList.contains("fa-regular")) {
       this.classList.remove("fa-regular");
       this.classList.add("fa-solid");
+	  const form = document.getElementById("wishlistForm");
+	  form.submit();
+	 
     } else {
       this.classList.remove("fa-solid");
       this.classList.add("fa-regular");
@@ -107,4 +110,11 @@ window.addEventListener('scroll', () => {
     } else {
         fixedSidebar.classList.remove('course-detail-sidebar-fixed-after-scroll');
     }
+	const courseContent = document.querySelector(".course-content");
+	const fixedSidebarBottom = fixedSidebar.getBoundingClientRect().top;
+	const courseContentTop = courseContent.getBoundingClientRect().top;
+
+	if (fixedSidebarBottom >= courseContentTop+200) {
+		fixedSidebar.classList.remove('course-detail-sidebar-fixed-after-scroll');
+	} 
 });

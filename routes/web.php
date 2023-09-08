@@ -6,7 +6,10 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Middleware\EnsureUserIsLogin;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,12 +39,21 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-//Blog Controller
+//Blog Routes
 Route::get('blogs',[BlogController::class,'index'])->name('blogs');
 
 
 
 
-//Course Controller
+//Course Routes
 Route::get('courses',[CourseController::class,'index'])->name('courses');
 Route::get('courses/{id}',[CourseController::class,'show'])->name('courses.show');
+
+
+
+Route::middleware([EnsureUserIsLogin::class])->group(function () {
+
+    //Wishlist Routes
+    Route::get('wishlist',[WishlistController::class,'index'])->name('wishlist');
+    Route::post('wishlist',[WishlistController::class,'store'])->name('wishlist.store');
+});
